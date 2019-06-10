@@ -13,49 +13,48 @@ function TextEditor(props) {
 
   const { TextArea } = Input;
   console.log("props -------", props)
-  return (
-    <div className="new-annotation-wrapper" style={{ zIndex:"99" }}>
-      <div className="annotation-head-block">
-        <Avatar shape="circle" size={32} className="user-avatar" src={props.profile_pic} icon="user" /><h4 className="props-name">Nimisha</h4><span className="time">{props.timecode}</span>
-      </div>
-      <TextArea
-        onFocus= {props.onFocus}
-        onBlur= {props.onBlur}
-        onChange= {props.onChange}
-        value= {props.value}
-        placeholder="Write description" />
-      <Button className="annotation-submit" htmlType="submit" onClick= {props.onSubmit}>
-        Submit
-      </Button>
-    </div>
-
-  );
-
-  // return React.createElement(
-  //   React.Fragment,
-  //   null,
-  //   React.createElement(
-  //     Inner,
-  //     null,
-  //     React.createElement('textarea', {
-  //       placeholder: 'Write description',
-  //       onFocus: props.onFocus,
-  //       onBlur: props.onBlur,
-  //       onChange: props.onChange,
-  //       value: props.value
-  //     })
-  //   ),
-  //   React.createElement('div', null, `${props.timecode}`),
-  //   React.createElement('img', { src: `${props.profile_pic}`, className: "profile" }),
-
-  //   props.value && React.createElement(
-  //     Button,
-  //     {
-  //       onClick: props.onSubmit
-  //     },
-  //     'Submit'
-  //   )
+  // return (
+  //   <div className="new-annotation-wrapper" style={{ zIndex:"99" }}>
+  //     <div className="annotation-head-block">
+  //       <Avatar shape="circle" size={32} className="user-avatar" src={props.profile_pic} icon="user" /><h4 className="props-name">Nimisha</h4><span className="time">{props.timecode}</span>
+  //     </div>
+  //     <TextArea
+  //       onFocus= {props.onFocus}
+  //       onBlur= {props.onBlur}
+  //       onChange= {props.onChange}
+  //       value= {props.value}
+  //       placeholder="Write description" />
+  //     <Button className="annotation-submit" htmlType="submit" onClick= {props.onSubmit}>
+  //       Submit
+  //     </Button>
+  //   </div>
   // );
+
+  return React.createElement(
+    React.Fragment,
+    null,
+    React.createElement(
+      Inner,
+      null,
+      React.createElement('textarea', {
+        placeholder: 'Write description',
+        onFocus: props.onFocus,
+        onBlur: props.onBlur,
+        onChange: props.onChange,
+        value: props.value
+      })
+    ),
+    React.createElement('div', null, `${props.timecode}`),
+    React.createElement('img', { src: `${props.profile_pic}`, className: "profile" }),
+
+    props.value && React.createElement(
+      Button,
+      {
+        onClick: props.onSubmit
+      },
+      'Submit'
+    )
+  );
 }
 
 export default TextEditor;
