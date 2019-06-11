@@ -1,16 +1,16 @@
-React Image Annotation
+React Video Annotation
 =========================
 
-An infinitely customizable image annotation library built on React
+An infinitely customizable video annotation library built on React
 
 ![Annotation demo](demo.gif)
 
 ## Installation
 
 ```
-npm install --save react-image-annotation
+npm install --save react-video-annotation
 # or
-yarn add react-image-annotation
+yarn add react-video-annotation
 ```
 
 ## Usage
@@ -133,7 +133,7 @@ import {
   PointSelector,
   RectangleSelector,
   OvalSelector
-} from 'react-image-annotation/lib/selectors'
+} from 'react-video-annotation/lib/selectors'
 
 <Annotation
   type={PointSelector.TYPE}
