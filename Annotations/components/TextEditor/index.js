@@ -49,7 +49,7 @@ function TextEditor(props) {
     React.createElement(Img, {
       className: props.className,
       style: props.style,
-      alt: props.alt,
+      alt: props.allProps && props.allProps.alt,
       src: props.profile_pic,
       draggable: false,
     }),

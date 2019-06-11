@@ -190,7 +190,8 @@ export default compose(isMouseHovering(), withRelativeMousePos())((_temp2 = _cla
         timecode: props.timecode,
         profile_pic: props.profile_pic,
         onChange: props.onChange,
-        onSubmit: this.onSubmit
+        onSubmit: this.onSubmit,
+        all: props
       }),
       React.createElement(
         'div',
