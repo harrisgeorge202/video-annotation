@@ -48,13 +48,15 @@ export default {
         onChange = _ref2.onChange,
         onSubmit = _ref2.onSubmit,
         timecode = _ref2.timecode,
-        profile_pic= _ref2.profile_pic
+        profile_pic= _ref2.profile_pic,
+        allProps= _ref2
     return React.createElement(Editor, {
       annotation: annotation,
       onChange: onChange,
       onSubmit: onSubmit,
       timecode: timecode,
-      profile_pic: profile_pic
+      profile_pic: profile_pic,
+      allProps: allProps
     });
   },
   renderHighlight: function renderHighlight(_ref3) {

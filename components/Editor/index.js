@@ -40,7 +40,8 @@ function Editor(props) {
       onSubmit: props.onSubmit,
       timecode: props.timecode,
       profile_pic: props.profile_pic,
-      value: props.annotation.data && props.annotation.data.text
+      value: props.annotation.data && props.annotation.data.text,
+      allProps: props.allProps
     })
   );
 }
